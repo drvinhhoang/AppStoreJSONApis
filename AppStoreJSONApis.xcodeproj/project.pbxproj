@@ -13,6 +13,9 @@
 		AF371FED2781BBC400DF7CE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF371FEB2781BBC400DF7CE4 /* LaunchScreen.storyboard */; };
 		AF371FF52781BBFA00DF7CE4 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF371FF42781BBFA00DF7CE4 /* BaseTabBarController.swift */; };
 		AF371FF82781CF8800DF7CE4 /* AppsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF371FF72781CF8800DF7CE4 /* AppsSearchController.swift */; };
+		AF371FFB2781EB3800DF7CE4 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF371FFA2781EB3800DF7CE4 /* SearchResultCell.swift */; };
+		AF9C38FD2782EB5200F7F709 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C38FC2782EB5200F7F709 /* UIView+Layout.swift */; };
+		AF9C39002782FE4A00F7F709 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C38FF2782FE4A00F7F709 /* VerticalStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		AF371FEE2781BBC400DF7CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF371FF42781BBFA00DF7CE4 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		AF371FF72781CF8800DF7CE4 /* AppsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsSearchController.swift; sourceTree = "<group>"; };
+		AF371FFA2781EB3800DF7CE4 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		AF9C38FC2782EB5200F7F709 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		AF9C38FF2782FE4A00F7F709 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 			children = (
 				AF371FE02781BBBE00DF7CE4 /* AppDelegate.swift */,
 				AF371FE22781BBBE00DF7CE4 /* SceneDelegate.swift */,
+				AF9C38FE2782F82C00F7F709 /* Helpers */,
+				AF371FF92781EB0B00DF7CE4 /* Views */,
 				AF371FF62781CF2100DF7CE4 /* Controller */,
 				AF371FE92781BBC400DF7CE4 /* Assets.xcassets */,
 				AF371FEB2781BBC400DF7CE4 /* LaunchScreen.storyboard */,
@@ -73,6 +81,23 @@
 				AF371FF72781CF8800DF7CE4 /* AppsSearchController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		AF371FF92781EB0B00DF7CE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF371FFA2781EB3800DF7CE4 /* SearchResultCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF9C38FE2782F82C00F7F709 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF9C38FC2782EB5200F7F709 /* UIView+Layout.swift */,
+				AF9C38FF2782FE4A00F7F709 /* VerticalStackView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +171,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF371FF52781BBFA00DF7CE4 /* BaseTabBarController.swift in Sources */,
+				AF9C38FD2782EB5200F7F709 /* UIView+Layout.swift in Sources */,
 				AF371FE12781BBBE00DF7CE4 /* AppDelegate.swift in Sources */,
 				AF371FE32781BBBE00DF7CE4 /* SceneDelegate.swift in Sources */,
 				AF371FF82781CF8800DF7CE4 /* AppsSearchController.swift in Sources */,
+				AF371FFB2781EB3800DF7CE4 /* SearchResultCell.swift in Sources */,
+				AF9C39002782FE4A00F7F709 /* VerticalStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
