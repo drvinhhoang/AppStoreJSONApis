@@ -9,6 +9,25 @@ import UIKit
 
 class SearchResultCell: UICollectionViewCell {
     
+    var appResult: Result! {
+        didSet {
+            nameLabel.text = appResult.trackName
+            ratingLabel.text = "Rating: \(appResult.averageUserRating ?? 0)"
+            
+            let url = URL(string: appResult.artworkUrl100)
+            appIconImageView.sd_setImage(with: url)
+            screenshot1ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls[0]))
+            if appResult.screenshotUrls.count > 2 {
+                screenshot2ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls[1]))
+                
+            }
+            if appResult.screenshotUrls.count > 3 {
+                screenshot3ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls[2]))
+            }
+        }
+    }
+    
+    
     let appIconImageView: UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = .red
@@ -69,10 +88,10 @@ class SearchResultCell: UICollectionViewCell {
     }
     
     
-   
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-   
+        
         let infoTopStackView = UIStackView(arrangedSubviews: [
             appIconImageView,
             VerticalStackView(arrangedSubviews: [
@@ -80,7 +99,7 @@ class SearchResultCell: UICollectionViewCell {
             ]),
             getButton
         ])
-
+        
         infoTopStackView.spacing = 12
         infoTopStackView.alignment = .center
         
@@ -89,10 +108,10 @@ class SearchResultCell: UICollectionViewCell {
         screenshotsStackView.distribution = .fillEqually
         
         let overallStackView = VerticalStackView(arrangedSubviews: [infoTopStackView, screenshotsStackView], spacing: 16)
-      
+        
         addSubview(overallStackView)
         overallStackView.fillSuperview(padding: .init(top: 16, left: 16, bottom: 16, right: 16))
-
+        
     }
     
     required init?(coder: NSCoder) {
