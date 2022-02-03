@@ -11,6 +11,8 @@ struct SearchResult: Decodable {
     let resultCount: Int
     let results: [Result]
     
+    // add new
+    
 }
 
 struct Result: Decodable {
